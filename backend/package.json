@@ -1,0 +1,19 @@
+{
+  "name": "widget-vainu",
+  "version": "0.0.1",
+  "description": "widget to display company info",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "author": "Naren",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0"
+  }
+}
