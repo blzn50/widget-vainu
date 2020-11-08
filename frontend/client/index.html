@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Client using Vainu Widget</title>
+    <style>
+      body {
+        margin: 30px 20px;
+        overflow: auto;
+        overflow-x: hidden;
+      }
+
+      .main-page {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+      }
+
+      .section-left {
+        flex: 2;
+      }
+
+      .section-right {
+        flex: 1;
+      }
+
+      .section-bottom {
+        margin-top: 30px;
+        width: 390px;
+      }
+
+      .instruction {
+        padding: 10px 20px;
+        padding-bottom: 0px;
+      }
+
+      code {
+        color: #b3b3b3;
+      }
+
+      .script-code {
+        background: #343131;
+        padding: 20px;
+      }
+
+      .params-explanation {
+        padding: 20px 30px;
+        background: #eee;
+      }
+
+      .params-explanation>div:last-child {
+        padding-left: 20px;
+      }
+
+      .params-explanation>div:first-child {
+        margin-bottom: 10px;
+      }
+
+      h3.follow-instruction {
+        margin: 0px;
+      }
+
+      @media screen and (max-width: 992px) {
+        .main-page {
+          display: block;
+          position: relative;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Awesome Client using Vainu Widget</h1>
+    <div class="main-page">
+      <div class="section-left">
+        <p>Load vainu widget whereever you want in your webpage.</p>
+        <h3 class="follow-instruction">Follow the instruction</h3>
+        <div class="instruction">
+          <p>1. Get the script from vainu</p>
+          <div class="script-code">
+            <code>
+              (function (w, d, s, o, f, js, fjs) {
+              w['vainu-widget'] = o; w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+              js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+              js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+              }(window, document, 'script', 'vainu', 'script url'));
+            </code>
+          </div>
+          <br />
+          <p>2. Load the script</p>
+          <div class="script-code">
+            <code>
+              vainu('load', "section-right", "12345678");
+            </code>
+          </div>
+          <div class="params-explanation">
+            <div>Required parameters</div>
+            <div>
+              <b>load</b> - API method to run the script<br />
+              <b>section-right</b> - Class name of the webpage to load the vainu widget into<br />
+              <b>12345678</b> - Business id to fetch data from vainu<br />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-right">
+        <!-- Here goes vainu widget -->
+      </div>
+    </div>
+    <div class="section-bottom">
+      <!-- Here goes another vainu widget -->
+    </div>
+    <script>
+      /**
+       * @param {String} w - browser window object
+       * @param {String} d - browser HTML document object
+       * @param {String} s - contains the word 'script' to create new DOM element 
+       * @param {String} o - dynamically defined name of the global variable 
+       * @param {String} f - address of the main script that is needed to load
+       * @param {String} js - script element created later on for the widget using 's' parameter
+       * @param {String} fjs - the script tag that is already located in the body
+       * */
+      (function (w, d, s, o, f, js, fjs) {
+        w[ 'vainu-widget' ] = o; w[ o ] = w[ o ] || function () { (w[ o ].q = w[ o ].q || []).push(arguments) };
+        js = d.createElement(s), fjs = d.getElementsByTagName(s)[ 0 ];
+        js.id = o; js.src = f; js.async = 1; fjs.parentNode.insertBefore(js, fjs);
+      }(window, document, 'script', 'vainu', 'http://localhost:5000/widget.js'));
+      /** 
+       * @param {String} load - api method name to load script
+       * @param {String} section-right - class name of the element to load the vainu widget
+       * @param {String} 02152542 - business id to fetch
+       * */
+      vainu('load', 'section-right', '90146432');
+      vainu('load', 'section-bottom', '23087882');
+    </script>
+  </body>
+
+</html>

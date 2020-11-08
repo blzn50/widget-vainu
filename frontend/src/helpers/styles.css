@@ -1,0 +1,132 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+.parent-wrapper {
+  background: rgb(255, 255, 254);
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  max-width: 450px;
+  border: 1px solid #eee;
+  position: relative;
+  overflow: auto;
+  min-width: 353px;
+}
+
+.parent-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+.parent-wrapper::-webkit-scrollbar-track {
+  background-color: #e2e2e2;
+}
+.parent-wrapper::-webkit-scrollbar-thumb {
+  background-color: #bababa;
+  border-radius: 5px;
+  border: 1px solid #e2e2e2;
+}
+
+.vainu-brand {
+  background-color: #eee;
+  padding: 0px 20px;
+}
+
+.widget-content {
+  padding: 10px 20px 20px 20px;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.error-message-section {
+  display: block;
+}
+
+.basic-info {
+  width: 60%;
+}
+
+.basic-info > div {
+  line-height: 1.2em;
+  color: rgb(135, 127, 144);
+}
+
+.title {
+  display: inline-block;
+  width: 55%;
+}
+
+.value {
+  display: inline-block;
+  color: #000;
+  width: 40%;
+}
+
+.address-link {
+  text-decoration: none;
+}
+
+.address-link > div {
+  line-height: 1.2em;
+}
+
+.address-link,
+.address-link:active,
+.address-link:hover {
+  color: rgb(17, 148, 242);
+}
+
+h3,
+h4 {
+  margin: 10px 0px;
+}
+h3 > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+i > a {
+  color: #551a8b;
+}
+
+.social-icon {
+  padding-right: 10px;
+  color: #000;
+  text-decoration: none;
+}
+
+.fa {
+  font-size: 22px;
+}
+.fa-twitter-square {
+  color: #1da1f2;
+}
+
+.fa-facebook-square {
+  color: #4267b2;
+}
+
+.fa-linkedin-square {
+  color: #2867b2;
+}
+
+/* Smaller screens */
+@media screen and (max-width: 992px) {
+  .parent-wrapper {
+    height: auto;
+    max-height: 300px;
+    max-width: 300px;
+    padding: 10px;
+    scrollbar-width: thin;
+    min-width: auto;
+  }
+
+  .section {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .basic-info {
+    width: 100%;
+  }
+}
