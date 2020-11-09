@@ -5,9 +5,7 @@ A webapp which can be embedded into other client web apps and display business i
 ### Starting the project
 
 #### Server
-
-First of all,
-
+To start the server,
 ```sh
 cd backend
 ```
