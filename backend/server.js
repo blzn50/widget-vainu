@@ -28,5 +28,3 @@ app.use(helmet());
 app.use('/businesses', authenticationMiddleware, widgetRouter);
 
 app.listen(3001, () => console.log('server running in port 3001'));
-
-module.exports = app;

@@ -127,4 +127,4 @@ The embedding of the hosted JS file won't be enough to run the script in new cli
 }
 ```
 
-Restart the backend server and the new client webapp will be able to load the widget JS.
+Restart the backend server and the new client will be able to load the widget.
